@@ -35,26 +35,3 @@ struct Stack<T> {
 		return elements.last
 	}
 }
-
-//using a stack to reverse a word
-var stressed = "stressed"
-let characters = Array(stressed.characters)
-
-var charStack = Stack<Character>()
-
-for char in characters {
-	charStack.push(char)
-}
-
-charStack.count
-charStack.isEmpty
-charStack.peek()
-
-charStack.pop()
-charStack.pop()
-charStack.pop()
-charStack.pop()
-charStack.pop()
-charStack.pop()
-charStack.pop()
-charStack.pop()

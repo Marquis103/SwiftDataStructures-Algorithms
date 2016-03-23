@@ -46,26 +46,4 @@ extension Queue {
 	}
 }
 
-struct Task {
-	var taskName:String
-	var priority:Int
-}
-
-extension Task:Equatable {}
-func == (lhs: Task, rhs:Task) -> Bool {
-	return lhs.taskName == rhs.taskName && lhs.priority == rhs.priority
-}
-
-let task1 = Task(taskName: "Add image to UITableViewCell", priority: 3)
-let task2 = Task(taskName: "Add image to UITableViewCell", priority: 3)
-
-var q = Queue<Task>()
-q.enqueue(task1)
-q.enqueue(task2)
-q.isEmpty
-q.homogenous()
-q.count
-
-var taskToExecute = q.dequeue()
-
 
